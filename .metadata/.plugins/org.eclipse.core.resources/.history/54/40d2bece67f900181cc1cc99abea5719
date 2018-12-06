@@ -19,20 +19,8 @@ public class Doctor {
 	@Transient
 	String fieldOfStudy;
 	
-	@ManyToOne
+	@ManyToOne;
 	Hospital hospital;
-
-	
-	
-	 
-	
-	public Hospital getHospital() {
-		return hospital;
-	}
-
-	public void setHospital(Hospital hospital) {
-		this.hospital = hospital;
-	}
 
 	public int getId() {
 		return id;

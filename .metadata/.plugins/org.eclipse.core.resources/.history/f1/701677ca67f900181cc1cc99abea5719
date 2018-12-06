@@ -4,7 +4,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 import javax.persistence.Transient;
 
 @Entity
@@ -18,21 +17,6 @@ public class Doctor {
 
 	@Transient
 	String fieldOfStudy;
-	
-	@ManyToOne
-	Hospital hospital;
-
-	
-	
-	 
-	
-	public Hospital getHospital() {
-		return hospital;
-	}
-
-	public void setHospital(Hospital hospital) {
-		this.hospital = hospital;
-	}
 
 	public int getId() {
 		return id;

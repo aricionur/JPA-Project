@@ -1,0 +1,13 @@
+package com.aricionur.jpaproject.run;
+
+import com.aricionur.jpaproject.dao.DAO;
+
+public class MainTwo {
+	
+	public static void main(String[] args) {
+		
+		DAO dao = DAO();
+		
+	}
+
+}
