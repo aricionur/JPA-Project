@@ -1,0 +1,10 @@
+package com.aricionur.jpaproject.dao;
+
+public class DAO {
+		
+		//-------INSERT-----//
+	public void insert(Obj){
+		
+	}
+	
+}

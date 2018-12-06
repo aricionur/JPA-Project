@@ -1,0 +1,17 @@
+package com.aricionur.jpaproject.run;
+
+import com.aricionur.jpaproject.dao.DAO;
+import com.aricionur.jpaproject.entity.Hospital;
+
+public class MainOne {
+
+	public static void main(String[] args) {
+		
+		DAO dao = new DAO();
+		
+		Hospital hospital = new Hospital();
+		
+		dao.insert(hospital);
+		
+	}
+}

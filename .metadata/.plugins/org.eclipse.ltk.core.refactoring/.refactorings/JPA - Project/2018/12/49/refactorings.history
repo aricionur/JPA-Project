@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;hpspital&apos; in &apos;com.aricionur.jpaproject.run.MainOne.main(...)&apos; to &apos;hospital&apos;&#x0D;&#x0A;- Original project: &apos;JPA - Project&apos;&#x0D;&#x0A;- Original element: &apos;com.aricionur.jpaproject.run.MainOne.main(String[]).hpspital&apos;&#x0D;&#x0A;- Renamed element: &apos;hpspital&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;hpspital&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;com.aricionur.jpaproject.run{MainOne.java[MainOne~main~\[QString;@hpspital!238!272!247!254!QHospital;!0!false" name="hospital" references="true" stamp="1544102913095" version="1.0"/>
+</session>

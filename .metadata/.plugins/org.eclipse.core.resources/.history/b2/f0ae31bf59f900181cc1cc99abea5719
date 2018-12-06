@@ -1,0 +1,18 @@
+package com.aricionur.jpaproject.dao;
+
+public class DAO extends ADao {
+		
+		//-------INSERT-----//
+	public void insert(Object obj){
+		em.getTransaction().begin();
+		em.persist(obj);
+		em.getTransaction().commit();
+	}
+	
+	public void update(Object obj){
+		em.getTransaction().begin();
+		em.persist(obj);
+		em.getTransaction().commit();
+	}
+	
+}

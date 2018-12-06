@@ -1,0 +1,10 @@
+package com.aricionur.jpaproject.dao;
+
+public class DAO extends ADao {
+		
+		//-------INSERT-----//
+	public void insert(Object obj){
+		
+	}
+	
+}

@@ -1,0 +1,5 @@
+package com.aricionur.jpaproject.dao;
+
+public class DAO {
+
+}

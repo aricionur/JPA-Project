@@ -1,0 +1,10 @@
+package com.aricionur.jpaproject.run;
+
+public class MainOne {
+
+	public static void main(String[] args) {
+		
+		
+		
+	}
+}
