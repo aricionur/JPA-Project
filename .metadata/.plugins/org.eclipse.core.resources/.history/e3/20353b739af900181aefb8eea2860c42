@@ -1,0 +1,28 @@
+package com.aricionur.jpaproject.entity;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.Transient;
+
+@Entity
+public class Patient {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	int id;
+	
+	String name;
+	
+	@Transient
+	String patientComplaint;
+	
+	@ManyToMany(mappedBy = "patientList")
+	List<Doctor> doctorList = new ArrayList<>();
+	
+}

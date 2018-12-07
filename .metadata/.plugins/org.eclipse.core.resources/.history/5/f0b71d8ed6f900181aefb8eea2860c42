@@ -1,0 +1,24 @@
+package com.aricionur.jpaproject.run;
+
+import com.aricionur.jpaproject.dao.DAO;
+import com.aricionur.jpaproject.entity.Patient;
+
+public class MainThree {
+
+	public static void main(String[] args) {
+		
+		DAO dao = new DAO();
+		
+		Patient patientOne = new Patient();
+		patientOne.setName("PatientOne");
+		patientOne.setPatientComplaint("headache");
+		dao.insert(patientOne);
+		
+		Patient patientTwo = new Patient();
+		patientTwo.setName("PatientOne");
+		patientTwo.setPatientComplaint("headache");
+		dao.insert(patientTwo);
+		
+		
+	}
+}

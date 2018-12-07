@@ -1,0 +1,22 @@
+package com.aricionur.jpaproject.run;
+
+import com.aricionur.jpaproject.dao.DAO;
+import com.aricionur.jpaproject.entity.Patient;
+
+public class MainThree {
+
+	public static void main(String[] args) {
+		DAO dao = new DAO();
+		
+		//----READ data From DB tables---
+		//--Single Patient--
+		int patientId = 2;
+		Patient patient = dao.getSinglePatientById(patientId);
+		System.out.println("Name of patient by ID " + patientId + ": " + patient.getName());
+		//--All paitents--
+		List<Patient> allPatients = dao.getAllPatients();
+		
+	
+	}
+	
+}

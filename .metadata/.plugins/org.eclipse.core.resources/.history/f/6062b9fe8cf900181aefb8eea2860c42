@@ -1,0 +1,52 @@
+package com.aricionur.jpaproject.run;
+
+import com.aricionur.jpaproject.dao.DAO;
+import com.aricionur.jpaproject.entity.Doctor;
+import com.aricionur.jpaproject.entity.Hospital;
+
+
+public class MainTwo {
+	
+	public static void main(String[] args) {
+		
+		DAO dao =new DAO();
+		
+		Hospital hospitalOne = new Hospital();
+		hospitalOne.setName("HospitalOne");
+		dao.insert(hospitalOne);
+//		Hospital hospitalTwo = new Hospital();
+//		hospitalTwo.setName("HospitalTwo");
+		
+		Doctor doctorOne = new Doctor();
+		doctorOne.setHospital(hospitalOne);
+		doctorOne.setName("doctorOne");
+		doctorOne.setFieldOfStudy("internal medicine");
+		dao.insert(doctorOne);
+		
+		Doctor doctorTwo = new Doctor();
+		doctorTwo.setHospital(hospitalOne);
+		doctorTwo.setName("doctorTwo");
+		doctorTwo.setFieldOfStudy("internal medicine");
+		dao.insert(doctorTwo);
+//		Doctor doctorThree = new Doctor();
+//		doctorThree.setHospital(hospitalTwo);
+//		doctorThree.setName("doctorThree");
+//		doctorThree.setFieldOfStudy("cardiologist");
+//		
+//		Doctor doctorFour = new Doctor();
+//		doctorFour.setHospital(hospitalTwo);
+//		doctorFour.setName("doctorFour");
+//		doctorFour.setFieldOfStudy("cardiologist");
+		
+		
+//		dao.insert(hospitalTwo);
+		
+		
+//		dao.insert(doctorThree);
+//		dao.insert(doctorFour);
+		
+		
+		
+	}
+
+}

@@ -21,16 +21,28 @@ public class Hospital {
 	String name;
 
 	@OneToMany
-	@JoinTable(name = "hospital_doctor", joinColumns = @JoinColumn(name = "hospital_id"), inverseJoinColumns = @JoinColumn(name = "doctor_id"))
-	List<Doctor> doctorList = new ArrayList<>();
-
-	public List<Doctor> getDoctorList() {
-		return doctorList;
+	@JoinTable(name=("hospital_patient"),joinColumns=@JoinColumn(name="hospital_id"),inverseJoinColumns=@JoinColumn(name=("patient_id")))
+	List<Patient> patientList = new ArrayList<>();
+	
+	public void setPatientList(List<Patient> patientList) {
+		this.patientList = patientList;
 	}
-
-	public void setDoctorList(List<Doctor> doctorList) {
-		this.doctorList = doctorList;
+	public List<Patient> getPatientList() {
+		return patientList;
 	}
+	
+	
+//	@OneToMany
+//	@JoinTable(name = "hospital_doctor", joinColumns = @JoinColumn(name = "hospital_id"), inverseJoinColumns = @JoinColumn(name = "doctor_id"))
+//	List<Doctor> doctorList = new ArrayList<>();
+//
+//	public List<Doctor> getDoctorList() {
+//		return doctorList;
+//	}
+//
+//	public void setDoctorList(List<Doctor> doctorList) {
+//		this.doctorList = doctorList;
+//	}
 
 	public void setId(int id) {
 		this.id = id;

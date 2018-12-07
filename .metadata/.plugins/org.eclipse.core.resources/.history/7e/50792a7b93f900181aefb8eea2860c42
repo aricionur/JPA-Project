@@ -1,0 +1,61 @@
+package com.aricionur.jpaproject.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.Transient;
+
+@Entity
+public class Doctor {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	int id;
+
+	String name;
+
+	@Transient
+	String fieldOfStudy;
+	
+//	@ManyToOne
+//	Hospital hospital;
+//
+//	
+//	
+//	 
+//	
+//	public Hospital getHospital() {
+//		return hospital;
+//	}
+//
+//	public void setHospital(Hospital hospital) {
+//		this.hospital = hospital;
+//	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getFieldOfStudy() {
+		return fieldOfStudy;
+	}
+
+	public void setFieldOfStudy(String fieldOfStudy) {
+		this.fieldOfStudy = fieldOfStudy;
+	}
+
+}

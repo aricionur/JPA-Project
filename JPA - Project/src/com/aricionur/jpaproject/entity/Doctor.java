@@ -1,9 +1,16 @@
 package com.aricionur.jpaproject.entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Transient;
 
@@ -19,20 +26,10 @@ public class Doctor {
 	@Transient
 	String fieldOfStudy;
 	
-	@ManyToOne
-	Hospital hospital;
-
 	
-	
-	 
-	
-	public Hospital getHospital() {
-		return hospital;
-	}
-
-	public void setHospital(Hospital hospital) {
-		this.hospital = hospital;
-	}
+	@ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable(name = "doctor_patient", joinColumns=@JoinColumn(name="doctor_id"), inverseJoinColumns=@JoinColumn(name="patient_id"))
+	List<Patient> patientList = new ArrayList<>();
 
 	public int getId() {
 		return id;
@@ -57,5 +54,15 @@ public class Doctor {
 	public void setFieldOfStudy(String fieldOfStudy) {
 		this.fieldOfStudy = fieldOfStudy;
 	}
+
+	public List<Patient> getPatientList() {
+		return patientList;
+	}
+
+	public void setPatientList(List<Patient> patientList) {
+		this.patientList = patientList;
+	}
+	
+	
 
 }

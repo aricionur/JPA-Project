@@ -1,0 +1,12 @@
+package com.aricionur.jpaproject.run;
+
+
+
+public class MainThree {
+
+	public static void main(String[] args) {
+		DAO dao = new DAO();
+		
+	}
+	
+}
