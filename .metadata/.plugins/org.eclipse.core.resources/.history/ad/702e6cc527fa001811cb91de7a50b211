@@ -17,7 +17,6 @@ public class MainThree {
 		int patientId = 2;
 		Patient patient = dao.getSinglePatientById(patientId);
 		System.out.println("Name of patient by ID " + patientId + ": " + patient.getName());
-		
 		// --All patients--
 		List<Patient> allPatients = dao.getAllPatients();
 		System.out.println("All patients:");
